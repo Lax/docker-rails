@@ -1,0 +1,11 @@
+Dockerfile
+
+/node_modules
+
+/vendor/bundle
+/vendor/cache
+
+/public/assets
+/public/packs
+
+/tmp/db
