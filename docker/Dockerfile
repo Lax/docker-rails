@@ -9,7 +9,7 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
     apt-get update -qq && apt-get install -y gcc g++ make yarn postgresql-client
 COPY Gemfile Gemfile.lock $WD/
-RUN bundle install
+RUN bundle install --quiet
 COPY . $WD
 
 # Add a script to be executed every time the container starts.
